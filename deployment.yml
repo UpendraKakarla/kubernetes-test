@@ -43,5 +43,5 @@ spec:
         - name: POSTGRES_PASSWORD
           value: pass123
         ports:
-        - containerPort: 8080
+        - containerPort: 5432
 
