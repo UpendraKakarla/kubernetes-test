@@ -4,6 +4,8 @@ metadata:
   name: nginx-service
 spec:
   selector:
+    matchLabels:
+      app: nginx
     
   ports:
     - protocol: TCP
