@@ -16,8 +16,18 @@ REsolution:
 2.root@ip-172-31-41-202:/home/ubuntu/kubernetes-test# kubectl apply -f service.yml
 Error from server (BadRequest): error when creating "service.yml": Service in version "v1" cannot be handled as a Service: json: cannot unmarshal object into Go struct field ServiceSpec.spec.selector of type string
 Resolution:
-    
 
+
+root@ip-172-31-41-202:/home/ubuntu/kubernetes-test# kubectl  logs postgres-deployment-644ffd8cff-7mvdf
+Error: Database is uninitialized and superuser password is not specified.
+       You must specify POSTGRES_PASSWORD to a non-empty value for the
+       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+
+       You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+       connections without a password. This is *not* recommended.
+
+       See PostgreSQL documentation about "trust":
+       https://www.postgresql.org/docs/current/auth-trust.html
 
 
 Commands:
