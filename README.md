@@ -13,7 +13,10 @@ An error occurred (UnrecognizedClientException) when calling the ListClusters op
 REsolution:
     We have given wrong AWS Access key & Secret Key
 
-
+2.root@ip-172-31-41-202:/home/ubuntu/kubernetes-test# kubectl apply -f service.yml
+Error from server (BadRequest): error when creating "service.yml": Service in version "v1" cannot be handled as a Service: json: cannot unmarshal object into Go struct field ServiceSpec.spec.selector of type string
+Resolution:
+    
 
 
 
