@@ -3,5 +3,4 @@ kind: ConfigMap
 metadata:
   name: my-config
 data:
-  APP_NAME: "MyApp"
-  APP_ENV: "production"
+  db-port: "54321"
