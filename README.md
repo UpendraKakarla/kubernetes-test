@@ -1,6 +1,13 @@
 # kubernetes-test
 1. since we need docker images for deployment in k8 we  are choosing Nginx & Postgres:
 2. nginx :latest, postgres:latest
+3. deployment, service, configmap, secrets are done
+4. Helmchart
+
+
+Helmchart :
+    prerequisites:  
+        
 
 ERRORS:
     
@@ -33,7 +40,8 @@ Error: Database is uninitialized and superuser password is not specified.
 
        root@ip-172-31-41-202:/home/ubuntu/kubernetes-test# kubectl apply -f secret.yml
 Error from server (BadRequest): error when creating "secret.yml": Secret in version "v1" cannot be handled as a Secret: illegal base64 data at input byte 4
-        
+
+psql: error: connection to server at "a590e1a4af145447c91de7ed0fb8d421-1193114687.us-east-1.elb.amazonaws.com" (54.198.106.196), port 5432 failed: FATAL:  password authentication failed for user "upendra123"
 
 
 Commands:
@@ -50,7 +58,7 @@ Step 3: Configure kubectl to Connect to Your EKS Cluster
 
 kubectl get nodes
 psql postgres://postgres:pass123:5432/yourdatabase
-psql -h  a38716ae3912c4dd8bfc9e7a8ff40fdf-1626602263.us-east-1.elb.amazonaws.com   -U postgres -d postgres
+psql -h   a590e1a4af145447c91de7ed0fb8d421-1193114687.us-east-1.elb.amazonaws.com   -U postgres -d postgres
 
 
 
