@@ -41,7 +41,18 @@ spec:
         image: postgres:latest
         env:
         - name: POSTGRES_PASSWORD
-          value: pass123
+          valueFrom:
+            secretKeyRef:
+              name: db-secrets
+              key: password
+
+        - name: POSTGRES_USRENAME
+          valueFrom:
+            configMapKeyRef:
+              name: db-config
+              key: username
+
+
         ports:
         - containerPort: 5432
 

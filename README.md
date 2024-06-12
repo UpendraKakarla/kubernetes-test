@@ -45,3 +45,7 @@ Step 3: Configure kubectl to Connect to Your EKS Cluster
 kubectl get nodes
 psql postgres://postgres:pass123:5432/yourdatabase
 psql -h  a38716ae3912c4dd8bfc9e7a8ff40fdf-1626602263.us-east-1.elb.amazonaws.com   -U postgres -d postgres
+
+
+
+

@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: my-config
+  name: db-config
 data:
-  db-port: "54321"
+  username: upendra123
+  
