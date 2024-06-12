@@ -30,6 +30,12 @@ Error: Database is uninitialized and superuser password is not specified.
        https://www.postgresql.org/docs/current/auth-trust.html
 
 
+
+       root@ip-172-31-41-202:/home/ubuntu/kubernetes-test# kubectl apply -f secret.yml
+Error from server (BadRequest): error when creating "secret.yml": Secret in version "v1" cannot be handled as a Secret: illegal base64 data at input byte 4
+        
+
+
 Commands:
 
 1.aws eks list-clusters - to list all clusters.
