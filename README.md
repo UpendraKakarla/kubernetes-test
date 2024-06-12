@@ -7,10 +7,12 @@
 
 Helmchart :
     prerequisites:  
-        
+
 
 ERRORS:
     
+root@ip-172-31-41-202:/home/ubuntu/kubernetes-test# helm install nginx helm/nginx/
+Error: INSTALLATION FAILED: template: nginx/templates/ingress.yaml:1:14: executing "nginx/templates/ingress.yaml" at <.Values.ingress.enabled>: nil pointer evaluating interface {}.enabled
 
  1.  $ aws eks list-clusters
 
