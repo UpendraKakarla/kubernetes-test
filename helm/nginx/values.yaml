@@ -25,10 +25,10 @@ fullnameOverride: "nginx-deployment"
 #   # If not set and create is true, a name is generated using the fullname template
 #   name: ""
 
-# podAnnotations: {}
-# podLabels: {
+podAnnotations: {}
+podLabels: {
 
-# }
+}
 
 podSecurityContext: {}
   # fsGroup: 2000
