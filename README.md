@@ -45,6 +45,8 @@ Error from server (BadRequest): error when creating "secret.yml": Secret in vers
 
 psql: error: connection to server at "a590e1a4af145447c91de7ed0fb8d421-1193114687.us-east-1.elb.amazonaws.com" (54.198.106.196), port 5432 failed: FATAL:  password authentication failed for user "upendra123"
 
+root@ip-172-31-41-202:/home/ubuntu/kubernetes-test# helm install v1 helm/nginx
+Error: INSTALLATION FAILED: template: nginx/templates/serviceaccount.yaml:1:16: executing "nginx/templates/serviceaccount.yaml" at <.Values.serviceAccount.create>: nil pointer evaluating interface {}.create
 
 Commands:
 
@@ -62,6 +64,7 @@ kubectl get nodes
 psql postgres://postgres:pass123:5432/yourdatabase
 psql -h   a590e1a4af145447c91de7ed0fb8d421-1193114687.us-east-1.elb.amazonaws.com   -U postgres -d postgres
 
+kubectl config set-context --current --namespace=<desired-namespace>
 
 
 
